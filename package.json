@@ -1,5 +1,5 @@
 {
-  "name": "p3",
+  "name": "Gruber",
   "version": "0.0.1",
   "description": "Ecommerce site as part of the Uconn coding bootcamp",
   "main": "server.js",
@@ -12,7 +12,7 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "author": "",
+  "author": "Gruber Team",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.0.2",
