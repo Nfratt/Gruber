@@ -36,8 +36,25 @@ const foodSeed = [
   {
     itemName: "Peanut Butter",
     price: "5.00",
+    description: "A food spread made from ground dry-roasted peanuts.",
+    category: "Snacks"
+
  
-  }
+  },
+  {
+    itemName: "Carrots",
+    price: "3.99",
+    description: "A root vegetable, native to Europe and Southwestern Asia.",
+    category: "Produce"
+
+  },
+  {
+    itemName: "Coca Cola six pack of cans",
+    price: "6.99",
+    description: "A soft drink.",
+    category: "Drinks"
+
+  },
 
 
 ];
