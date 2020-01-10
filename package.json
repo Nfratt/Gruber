@@ -1,5 +1,5 @@
 {
-  "name": "Gruber",
+  "name": "gruber",
   "version": "0.0.1",
   "description": "Ecommerce site as part of the Uconn coding bootcamp",
   "main": "server.js",
