@@ -35,7 +35,7 @@ export function Stuff() {
   return (
     <ButtonToolbar>
       <Button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
+        Shopping Cart <i class="fas fa-shopping-cart"></i>
       </Button>
 
       <Example
