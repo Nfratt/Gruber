@@ -52,7 +52,7 @@ const foodSeed = [
     itemName: "Coca Cola six pack of cans",
     price: "6.99",
     description: "A soft drink.",
-    category: "Drinks"
+    category: "Soda"
 
   },
 

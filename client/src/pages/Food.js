@@ -18,7 +18,7 @@ class Food extends Component {
     this.loadFoods();
   }
 
-  loadBooks = () => {
+  loadFoods = () => {
     API.getFoods()
       .then(res =>
         this.setState({ food: res.data, itemName: "", price: "" })
