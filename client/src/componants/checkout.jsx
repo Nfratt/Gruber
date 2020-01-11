@@ -8,7 +8,9 @@ export function Checkout(props) {
  return (
    <Modal className="checkout"
      {...props}
+
      size="xl"
+
      aria-labelledby="contained-modal-title-vcenter"
      centered
    >
