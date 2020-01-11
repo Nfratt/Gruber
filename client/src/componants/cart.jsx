@@ -1,7 +1,7 @@
 import { Modal,Button,ButtonToolbar} from 'react-bootstrap';
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { CheckoutBtn } from "./checkout";
 export function Cart(props) {
  return (
    <Modal
@@ -12,19 +12,18 @@ export function Cart(props) {
    >
      <Modal.Header closeButton>
        <Modal.Title id="contained-modal-title-vcenter">
-         Modal heading
+         Your Cart
        </Modal.Title>
      </Modal.Header>
      <Modal.Body>
-       <h4>Centered Modal</h4>
-       <p>
-         Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-         dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-         consectetur ac, vestibulum at eros.
-       </p>
+       <h4>Here are the items in your cart</h4>
+       <div id ="itemshere">items will show here</div>
+       
+
      </Modal.Body>
      <Modal.Footer>
-       <Button onClick={props.onHide}>Close</Button>
+     <CheckoutBtn className="navitem"/>
+       <Button id="ctnshoppin" onClick={props.onHide}>Continue shopping</Button>
      </Modal.Footer>
    </Modal>
  );
@@ -34,9 +33,10 @@ export function CartBtn() {
 
  return (
    <ButtonToolbar>
-     <Button variant="primary" onClick={() => setModalShow(true)}>
+     <Button className="navitem1" variant="success" onClick={() => setModalShow(true)}>
        Shopping Cart <i class="fas fa-shopping-cart"></i>
      </Button>
+
 
      <Cart
        show={modalShow}
