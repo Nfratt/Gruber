@@ -35,7 +35,7 @@ export function Stuff() {
  return (
    <ButtonToolbar>
      <Button variant="primary" onClick={() => setModalShow(true)}>
-       test <i class="fas fa-shopping-cart"></i>
+       test <i className="fas fa-shopping-cart"></i>
      </Button>
 
      <Example

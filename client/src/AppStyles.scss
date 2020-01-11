@@ -2,3 +2,42 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/cosmo/bootswatch";
 
+#navbkrd{
+    background-image: linear-gradient(to bottom right, greenyellow, #80ff80
+    );
+    height: 150px;
+   
+
+    
+}
+h1{
+    color: greenyellow;
+    font-family: 'Anton', sans-serif;
+    padding-left: 45%;
+    padding-right: 45%;
+    
+}
+.navitem1{
+    height: 75px;
+    font-family: 'Anton', sans-serif;
+    margin: 10px;
+    position: relative;
+
+   
+}
+.navitem2{
+    height: 75px;
+    width: 100px;
+    font-family: 'Anton', sans-serif;
+    margin:10px ;
+
+   
+
+    
+}
+
+#ctnshoppin{
+    float: left;
+    background-color: goldenrod;
+
+}

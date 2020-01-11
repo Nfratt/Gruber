@@ -34,7 +34,7 @@ export function Loginbtn() {
 
  return (
    <ButtonToolbar>
-     <Button variant="primary" onClick={() => setModalShow(true)}>
+     <Button className="navitem2" variant="warning" onClick={() => setModalShow(true)}>
        Login <i class="fas fa-shopping-cart"></i>
      </Button>
 
