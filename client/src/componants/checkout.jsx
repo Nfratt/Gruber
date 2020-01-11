@@ -1,6 +1,8 @@
 import { Modal,Button,ButtonToolbar} from 'react-bootstrap';
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Elements, StripeProvider } from 'react-stripe-elements';
+import CheckoutForm from './CheckoutForm';
 
 export function Checkout(props) {
  return (
@@ -12,15 +14,18 @@ export function Checkout(props) {
    >
      <Modal.Header closeButton>
        <Modal.Title id="contained-modal-title-vcenter">
-         Modal heading
+         Checkout
        </Modal.Title>
      </Modal.Header>
      <Modal.Body>
-       <h4>Centered Modal</h4>
        <p>
-         Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-         dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-         consectetur ac, vestibulum at eros.
+       <StripeProvider apiKey="pk_test_hAdtEwXkn7tEEo0tmBIofNuf00R7L68wMO">
+      <div className="example">
+        <Elements>
+          <CheckoutForm />
+        </Elements>
+      </div>
+    </StripeProvider>
        </p>
      </Modal.Body>
      <Modal.Footer>
