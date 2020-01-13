@@ -15,7 +15,7 @@ export default function Footer(){
           </p>
       </span>
       <span>Gruber team:
-          Racheal Clark,Zach Cohen,Nick Frattaroli, Rafael Hermoso 
+          Rachael Clark, Zach Cohen, Nick Frattaroli, Rafael Hermoso 
       </span>
       <br></br>
       Gruber LLC Copyright&copy;
