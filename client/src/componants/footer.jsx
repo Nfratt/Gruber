@@ -18,7 +18,7 @@ export default function Footer(){
           Rachael Clark, Zach Cohen, Nick Frattaroli, Rafael Hermoso 
       </span>
       <br></br>
-      Gruber LLC Copyright&copy;
+      Copyright Gruber LLC &copy;
     </div>
   </footer>
     )
