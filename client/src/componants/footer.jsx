@@ -1,8 +1,5 @@
-import { Modal,Button,ButtonToolbar} from 'react-bootstrap';
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 export default function Footer(){
     return(
     <footer>
