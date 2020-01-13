@@ -10,7 +10,7 @@ export default function Footer(){
               The rideshare of Grocery shopping!
               <br></br>
               About us:
-              We are a small group of developers with an idea to modernize grocery shopping. our idea became Gruber&reg; 
+              We are a small group of developers with an idea to modernize grocery shopping. Our idea became Gruber&reg; 
               an even more convienient grocery delivery service.
           </p>
       </span>
