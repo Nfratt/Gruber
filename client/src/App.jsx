@@ -7,12 +7,14 @@ import Navbar from "./componants/nav";
 import Product from './componants/Product';
 import items from '../src/api/api';
 import Footer from "./componants/footer";
+import Logo from "./componants/images/Gruberlogo.png"
+
 
 
 export default () => <React.Fragment>
 <div className="background">
   <Container className="productcontainer">
-    <h1>Gruber</h1>
+  <img className="logo" src={Logo} alt="Gruberlogo logo" />
     <h3>Get your Groceries on Demand!!</h3>
     <Navbar>
       <Cart />
