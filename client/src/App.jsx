@@ -20,7 +20,6 @@ export default () => <React.Fragment>
       <Cart />
       <Login />
     </Navbar>
-    <div>items go here</div>
     <div className="App">
       <div className="App-products">
         {items.map(item => (
