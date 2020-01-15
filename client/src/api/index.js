@@ -11,6 +11,16 @@ export default {
   login: function (credentials) {
     return axios.post("/api/auth/login", credentials).then(res => res.data);
   },
-  ...protectedAPI
+ 
+    getFoods: function () {
+      debugger
+        return axios.get("/api/food");
+    },
+    protected: {
+      ...protectedAPI
+    }
+ 
 };
 
+
+  
