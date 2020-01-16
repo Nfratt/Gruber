@@ -4,6 +4,7 @@ const groceryController = require("../../../controllers/groceryController");
 // Matches with "/api/protected/food"
 router.route("/")
   .get(groceryController.findAll)
+  .get(groceryController.findAllEveryone)
   .post(groceryController.create);
 
 // Matches with "/api/protected/food/:id"
