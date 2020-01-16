@@ -16,13 +16,10 @@ export function Login(props) {
        </Modal.Title>
      </Modal.Header>
      <Modal.Body>
-       <h4>Centered Modal</h4>
-       <p>
-         Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-         dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-         consectetur ac, vestibulum at eros.
-       </p>
+       Here is the login modal here you will be asked to input a Username and Password
+       as well as be prompted to create an account if you dont have one
      </Modal.Body>
+     <Button>submit</Button>
      <Modal.Footer>
        <Button onClick={props.onHide}>Close</Button>
      </Modal.Footer>
