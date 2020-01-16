@@ -2,7 +2,7 @@ import { Modal,Button,ButtonToolbar} from 'react-bootstrap';
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export function Example(props) {
+export function CreateAcct(props) {
  return (
    <Modal
      {...props}
@@ -21,7 +21,7 @@ export function Example(props) {
         <div className="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
         	<div className="panel panel-default">
         		<div className="panel-heading">
-			    		<h3 className="panel-title">Please sign up for Bootsnipp <small>It's free!</small></h3>
+			    		<h3 className="panel-title">Sign up for Gruber <small>Yummmm!</small></h3>
 			 			</div>
 			 			<div className="panel-body">
 			    		<form role="form">
@@ -70,16 +70,16 @@ export function Example(props) {
    </Modal>
  );
 }
-export function Stuff() {
+export function AcctBttn() {
  const [modalShow, setModalShow] = React.useState(false);
 
  return (
    <ButtonToolbar>
      <Button variant="primary" onClick={() => setModalShow(true)}>
-       Shopping Cart <i className="fas fa-shopping-cart"></i>
+       Create Account <i className="fas create-account"></i>
      </Button>
 
-     <Example
+     <CreateAcct
        show={modalShow}
        onHide={() => setModalShow(false)}
      />
