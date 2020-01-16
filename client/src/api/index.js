@@ -13,7 +13,7 @@ export default {
   },
  
     getFoods: function () {
-      debugger
+      // debugger
         return axios.get("/api/food");
     },
     protected: {

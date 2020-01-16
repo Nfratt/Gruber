@@ -70,7 +70,8 @@ class App extends React.Component {
               {this.state.groceryItems.map(item => (
                 <Product
                   key={item.title}
-                  title={item.title}
+                  title={item.itemName}
+                  description={item.description}
                   price={item.price}
                 />
               ))}
