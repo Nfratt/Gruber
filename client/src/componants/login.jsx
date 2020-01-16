@@ -16,6 +16,7 @@ export function Login(props) {
        </Modal.Title>
      </Modal.Header>
      <Modal.Body>
+
      <div className="container">
         <div className="row centered-form">
         <div className="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
@@ -46,7 +47,9 @@ export function Login(props) {
     		</div>
     	</div>
     </div>
+
      </Modal.Body>
+     <Button>submit</Button>
      <Modal.Footer>
        <Button onClick={props.onHide}>Close</Button>
        <AcctBttn/>
