@@ -2,6 +2,7 @@ import { Modal,Button,ButtonToolbar} from 'react-bootstrap';
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {AcctBttn} from "./createAcct"
+import {ForgotBtn} from "./ForgotPassword"
 export function Login(props) {
  return (
    <Modal
@@ -51,10 +52,9 @@ export function Login(props) {
     </div>
 
      </Modal.Body>
-     <Button>submit</Button>
      <Modal.Footer>
-       <Button onClick={props.onHide}>Close</Button>
        <AcctBttn/>
+       <ForgotBtn/>
      </Modal.Footer>
    </Modal>
  );
