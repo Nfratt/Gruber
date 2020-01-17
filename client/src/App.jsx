@@ -64,7 +64,6 @@ class App extends React.Component {
             <Cart />
             <Login />
           </Navbar>
-          <div>items go here</div>
           <div className="App">
             <div className="App-products">
               {this.state.groceryItems.map(item => (
@@ -75,7 +74,7 @@ class App extends React.Component {
                   price={item.price}
                 />
               ))}
-              <p>test</p>
+
             </div>
           </div>
         </Container>
