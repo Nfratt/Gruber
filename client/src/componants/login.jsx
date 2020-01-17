@@ -17,12 +17,14 @@ export function Login(props) {
        </Modal.Title>
      </Modal.Header>
      <Modal.Body>
+
      <div className="login">
         <div className="row centered-form login">
         <div className="col-lg-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
         	<div className="panel panel-default login">
         		<div className="panel-heading login">
 			    		<h3 className="panel-title login">Sign into Gruber <small>Yummmm!</small></h3>
+
 			 			</div>
 			 			<div className="panel-body login">
 			    		<form role="form login">
@@ -47,7 +49,9 @@ export function Login(props) {
     		</div>
     	</div>
     </div>
+
      </Modal.Body>
+     <Button>submit</Button>
      <Modal.Footer>
        <Button onClick={props.onHide}>Close</Button>
        <AcctBttn/>

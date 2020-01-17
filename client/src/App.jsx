@@ -64,17 +64,17 @@ class App extends React.Component {
             <Cart />
             <Login />
           </Navbar>
-          <div>items go here</div>
           <div className="App">
             <div className="App-products">
               {this.state.groceryItems.map(item => (
                 <Product
                   key={item.title}
-                  title={item.title}
+                  title={item.itemName}
+                  description={item.description}
                   price={item.price}
                 />
               ))}
-              <p>test</p>
+
             </div>
           </div>
         </Container>
