@@ -2,6 +2,8 @@ import { Modal,Button,ButtonToolbar} from 'react-bootstrap';
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CheckoutBtn } from "./checkout";
+import  CartFunction  from "./cartFunction";
+
 export function Cart(props) {
  return (
    <Modal
@@ -18,7 +20,7 @@ export function Cart(props) {
      <Modal.Body>
        <h4>Here are the items in your cart</h4>
        <div id ="itemshere">items will show here</div>
-       
+     <CartFunction/>
 
      </Modal.Body>
      <Modal.Footer>
