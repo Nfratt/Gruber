@@ -16,9 +16,9 @@ export function CreateAcct(props) {
        </Modal.Title>
      </Modal.Header>
      <Modal.Body>
-<div className="container">
+<div className="acctCreate">
         <div className="row centered-form">
-        <div className="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        <div className="col-lg-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
         	<div className="panel panel-default">
         		<div className="panel-heading">
 			    		<h3 className="panel-title">Sign up for Gruber <small>Yummmm!</small></h3>
