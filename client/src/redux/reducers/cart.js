@@ -17,14 +17,14 @@ export default function (state = initialState, action) {
                 products: [...state.products, action.payload.product]
             };
         }
-        // case REMOVE: {
-        //     // remove all tokens from local storage
+        case REMOVE: {
+            // remove all tokens from local storage
         
-        //     return {
-        //         ...state,
-        //         products: setUserDetails()
-        //     };
-        // }
+            return {
+                ...state,
+                products:[...state.products, action.payload.product]
+            };
+        }
         default:
             return {
                 ...state,
