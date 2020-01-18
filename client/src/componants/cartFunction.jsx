@@ -27,3 +27,4 @@ export default function CartFunction({ itemsInCart, totalCost }) {
     </div>
   );
 }
+

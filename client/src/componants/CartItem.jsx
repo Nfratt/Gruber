@@ -1,14 +1,13 @@
 import React from 'react';
+import './Product.css';
 
 
-export default function CartItem({ title, cost, quantity }) {
-  return (
-    <div className="CartItem">
-      <div>{title}</div>
-      <div className="CartItem-details">
-        <div className="CartItem-quantity">Qty: {quantity}</div>
-        <div>${cost.toFixed(2)}</div>
-      </div>
-    </div>
-  );
+export default function CartItem({price, title, description }) {
+    return (
+        <div className="Product">
+            <h2 className="Product-title">{title}</h2>
+            <div className="Product-price">${price}</div>
+            <div className="product-description">{description}</div>
+        </div>
+    );
 }

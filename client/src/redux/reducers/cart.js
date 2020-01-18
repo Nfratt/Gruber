@@ -11,7 +11,7 @@ import { ADD, REMOVE } from "../actionTypes";
 export default function (state = initialState, action) {
     switch (action.type) {
         case ADD: {
-            
+            console.log('running')
             return {
                 ...state,
                 products: [...state.products, action.payload.product]

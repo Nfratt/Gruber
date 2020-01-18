@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import "./AppStyles.scss";
-import { Cart } from "./componants/cart";
+import  Cart  from "./componants/cart";
 import { Login } from "./componants/login";
 import Navbar from "./componants/nav";
 import Product from "./componants/Product";
@@ -61,7 +61,7 @@ class App extends React.Component {
           <img className="logo" src={Logo} alt="Gruberlogo logo" />
           <h3>Get your Groceries on Demand!!</h3>
           <Navbar>
-            <Cart />
+            {/* <Cart /> */}
             <Login />
           </Navbar>
           <div className="App">
