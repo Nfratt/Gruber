@@ -141,9 +141,9 @@ function makeJwts(dbUser) {
       firstName: dbUser.firstName,
       role: dbUser.role
     },
-    process.env.AUTH_TOKEN_SECRET,
+    process.env.ACCESS_TOKEN_SECRET,
     {
-      expiresIn: process.env.AUTH_TOKEN_DURATION,
+      expiresIn: process.env.ACCESS_TOKEN_DURATION,
       subject: dbUser._id.toString(),
       issuer: 'readinglist-api',
       audience: 'readinglist-react-gui'
