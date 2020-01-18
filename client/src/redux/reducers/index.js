@@ -10,18 +10,19 @@
 
 import { combineReducers } from "redux";   // @see {@link https://redux.js.org/api/combinereducers/}
 import user, { initialState as userState } from "./user";
-
+import cart, { initialState as cartState } from "./cart";
 
 /**
  * Create correctly setup initial state for root reducer
  */
 export const rootState = {
-    user: userState
+    user: userState,
+    cart: cartState
 };
 
 /**
  * Merging our separate reducers into one root reducer
  */
 export default combineReducers({
-    user
+    user, cart
 });
