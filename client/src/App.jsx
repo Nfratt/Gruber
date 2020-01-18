@@ -8,7 +8,7 @@ import Product from "./componants/Product";
 // import items from "../src/api/api";
 import Footer from "./componants/footer";
 import Logo from "./componants/images/Gruberlogo.png";
-import Utils from "./utils/library.js";
+// import Utils from "./utils/library.js";
 import API from './api';
 
 // export default () => <React.Fragment>
@@ -41,16 +41,16 @@ class App extends React.Component {
     groceryItems: []
   };
 
-  componentDidMount(){
-    console.log('homne page loaded');
+  componentDidMount() {
+    console.log('home page loaded');
     // debugger
     API.getFoods()
       .then((data) => {
-      console.log(data);
-      
-      this.setState({groceryItems: data.data})
-    });
-        console.log(this.state.groceryItems)
+        console.log(data);
+
+        this.setState({ groceryItems: data.data })
+      });
+    console.log(this.state.groceryItems)
 
   }
 
@@ -70,11 +70,11 @@ class App extends React.Component {
                 <Product
                   key={item.title}
                   title={item.itemName}
+                  image={item.image}
                   description={item.description}
                   price={item.price}
                 />
               ))}
-
             </div>
           </div>
         </Container>
