@@ -59,6 +59,30 @@ const foodSeed = [
 
   },
 
+  {
+    itemName: "Shrimp",
+    price: "24.99",
+    description: "a crustation that swims through the sea  (please note:common allergy)",
+    category: "Seafood",
+    image:"https://s3.amazonaws.com/cdn.legalseafoods.com/images/recipes/8.jpg"
+
+  },
+  {
+    itemName: "Sweet potato",
+    price: "5.00",
+    description: "is a dicotyledonous plant that belongs to the bindweed or morning glory family, Its large, starchy, sweet-tasting, tuberous roots are a root vegetable.",
+    category: "Produce",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqOF5TQtHWcS_sjsi2byPTp7x3rQ4B3-Vhq-uKuoijFzcSgc2i&s"
+
+  },
+  {
+    itemName: "Lidia Penne Rigate Pasta",
+    price: "9.00",
+    description: "Penne is an extruded type of pasta with cylinder-shaped pieces, their ends cut at a bias.",
+    category: "Pasta",
+    image:"https://res.cloudinary.com/nassau-candy/image/upload/c_fit,w_1000,h_1000,f_auto/921180.jpg"
+
+  },
 
 ];
 
