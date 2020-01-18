@@ -2,6 +2,7 @@
   border: 1px solid #eee;
   margin: 1rem 0;
   padding: 1rem;
+  
 }
 
 
@@ -39,7 +40,7 @@
 
 .Product-buy-button:hover,
 .Product-buy-button:focus {
-  background-color: #47b8d7;
+  background-color: #b3ffb3;
 }
 
 @media (min-width: 800px) {
