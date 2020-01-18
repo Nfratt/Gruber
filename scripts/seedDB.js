@@ -37,7 +37,8 @@ const foodSeed = [
     itemName: "Peanut Butter",
     price: "5.00",
     description: "A food spread made from ground dry-roasted peanuts.",
-    category: "Snacks"
+    category: "Snacks",
+    image:"https://target.scene7.com/is/image/Target/GUEST_db92f8c5-1113-48ee-a5a4-d4a03788632b"
 
  
   },
@@ -45,14 +46,16 @@ const foodSeed = [
     itemName: "Carrots",
     price: "3.99",
     description: "A root vegetable, native to Europe and Southwestern Asia.",
-    category: "Produce"
+    category: "Produce",
+    image:"https://www.tasteofhome.com/wp-content/uploads/2019/01/carrots-shutterstock_789443206-800x450.jpg"
 
   },
   {
     itemName: "Coca Cola six pack of cans",
     price: "6.99",
     description: "A soft drink.",
-    category: "Soda"
+    category: "Soda",
+    image:"https://www.meijer.com/content/dam/meijer/product/0004/90/0006/10/0004900006101_1_A1C1_1200.png"
 
   },
 
@@ -64,8 +67,8 @@ async function seed() {
     // clear DB
     console.log('Start');
     
-    await db.Food.remove({});
-    await db.User.remove({});
+    await db.Food.deleteMany({});
+    await db.User.deleteMany({});
     
     // add demo users
     const saltRounds = parseInt(process.env.PASSWORD_SALT_ROUNDS, 10);
@@ -80,7 +83,7 @@ async function seed() {
     // put demoUser's ID on each book
     foodSeed.forEach((it, idx) => it.user = userSeedOp.insertedIds[idx % 2]);
 
-    // add demo books to DB
+    // add demo food to DB
     const foodSeedOp = await db.Food.collection.insertMany(foodSeed);
     console.log(`Inserted ${foodSeedOp.result.n} foods.`);
 

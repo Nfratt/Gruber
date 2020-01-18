@@ -6,7 +6,7 @@ import CartItem from './CartItem';
 export default function CartFunction({ itemsInCart, totalCost }) {
   return (
     <div className="Cart">
-      <h2 className="Cart-title">Your shopping cart</h2>on
+      <h2 className="Cart-title">Your shopping cart</h2>
       {itemsInCart && itemsInCart.length > 0 ? (
         <div>
           {itemsInCart.map(item => (

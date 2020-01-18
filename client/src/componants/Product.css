@@ -19,6 +19,10 @@
   margin-bottom: 1rem;
 }
 
+.product-image{
+  height: 200px;
+  width: 200px;
+}
 .Product-buy-button {
   display: inline-block;
   margin: 0 0 1rem 0;
@@ -43,3 +47,4 @@
 .Product-buy-button:focus {
   background-color: #47b8d7;
 }
+
