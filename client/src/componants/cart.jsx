@@ -26,6 +26,7 @@ function Cart(props) {
                 <CartItem
                   key={item.title}
                   title={item.title}
+                  image={item.image}
                   description={item.description}
                   price={item.price}
                 />
