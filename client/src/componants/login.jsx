@@ -17,6 +17,7 @@ export class Login extends Component {
     const { username, password } = this.state
     const { data } = await axios.post("/api/auth/login", { username, password });
     console.log(data);
+    this.props.onLogin(false)
   }
   render() {
     const { props } = this
@@ -84,7 +85,7 @@ export function Loginbtn() {
         Login <i class="fas fa-shopping-cart"></i>
       </Button>
 
-      <Login show={modalShow} onHide={() => setModalShow(false)} />
+      <Login show={modalShow} onHide={() => setModalShow(false) } onLogin={setModalShow} />
     </ButtonToolbar>
   );
 }
