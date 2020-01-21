@@ -61,7 +61,7 @@ const foodSeed = [
 
   {
     itemName: "Shrimp",
-    price: "24.99",
+    price: "24.99 per lbs",
     description: "a crustation that swims through the sea  (please note:common allergy)",
     category: "Seafood",
     image:"https://s3.amazonaws.com/cdn.legalseafoods.com/images/recipes/8.jpg"
@@ -76,7 +76,7 @@ const foodSeed = [
 
   },
   {
-    itemName: "Lidia Penne Rigate Pasta",
+    itemName: "Lidia's Penne Rigate Pasta",
     price: "9.00",
     description: "Penne is an extruded type of pasta with cylinder-shaped pieces, their ends cut at a bias.",
     category: "Pasta",
