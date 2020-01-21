@@ -8,7 +8,7 @@ function Product({ onAdd, price, title, description, image }) {
         <div className="Product">
             <h2 className="Product-title">{title}</h2>
             <img className="product-image" src={image} alt="product on our store (renders multiple times)"/>
-            <div className="Product-price">${price} per lbs</div>
+            <div className="Product-price">${price}</div>
             <div className="product-description">{description}</div>
             <button className="Product-buy-button" onClick={() => {
                 console.log({ title, price, description, image })
