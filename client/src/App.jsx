@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import "./AppStyles.scss";
-import  Cart  from "./componants/cart";
 import { Login } from "./componants/login";
 import Navbar from "./componants/nav";
 import Product from "./componants/Product";
