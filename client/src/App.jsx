@@ -63,6 +63,7 @@ class App extends React.Component {
             {/* <Cart /> */}
             <Login />
           </Navbar>
+          <span className="spacer"/>
           <div className="App">
             <div className="App-products">
               {this.state.groceryItems.map(item => (
