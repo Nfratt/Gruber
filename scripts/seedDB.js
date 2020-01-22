@@ -9,7 +9,7 @@ const db = require("../models");
 // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
 
-mongoose.connect('mongodb://localhost/Grocery', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
 
 
 const demoUserSeed = [
@@ -28,6 +28,14 @@ const demoUserSeed = [
     email: "demo2@email.com",
     username: 'demo2',
     passwordHash: 'abcdefg'
+  },
+  {
+    role: "user",
+    firstName: "Colin",
+    lastName: "Rudd",
+    email: "xh.io",
+    username: 'Cnrudd',
+    passwordHash: ''
   }
 ]
 
