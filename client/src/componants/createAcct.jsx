@@ -55,15 +55,14 @@ export class CreateAcct extends Component {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Header closeButton>
-        </Modal.Header>
+        <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="acctCreate">
             <h3 className="panel-title">
               Sign up for Gruber <small>Yummmm!</small>
             </h3>
           </div>
-		  <form onSubmit={this.userStorage} style={{alignItems: "center"}}>
+          <form onSubmit={this.userStorage} style={{ alignItems: 'center' }}>
             <div className="row">
               <div className="col-xs-6 col-sm-6 col-md-6">
                 <input
