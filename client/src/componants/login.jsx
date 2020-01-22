@@ -97,7 +97,7 @@ export function Loginbtn() {
         onClick={() => setModalShow(true)}
         
       >
-        Login <i class="fas fa-shopping-cart"></i>
+        Login <i className="fas fa-shopping-cart"></i>
       </Button>
 
       <Login show={modalShow} onHide={() => setModalShow(false) } onLogin={setModalShow}/>
