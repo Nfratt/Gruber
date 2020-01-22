@@ -142,7 +142,7 @@ export function AcctBttn() {
 		  Create Account <i className="fas create-account"></i>
 		</Button>
   
-		<CreateAcct show={modalShow} onHide={() => setModalShow(false)} />
+		<createAcct show={modalShow} onHide={() => setModalShow(false)} />
 	  </ButtonToolbar>
 	);
   }
