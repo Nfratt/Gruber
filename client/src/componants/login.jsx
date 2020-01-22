@@ -44,7 +44,7 @@ export class Login extends Component {
       >
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <form role="form login" onSubmit={this.userStorage} style={{alignItems: "center"}}>
+          <form onSubmit={this.userStorage} style={{alignItems: "center"}}>
             <h3 className="panel-title login">
               Sign into Gruber! <small>Yummmm!</small>
             </h3>
