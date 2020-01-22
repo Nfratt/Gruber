@@ -48,7 +48,7 @@ module.exports = {
     try {
       const user = await db.User.findOne({ username: req.body.username });
       if (!user) {
-        res.status(200).json({
+        res.status(400).json({
           success: false,
           errors: { username: 'User not found' }
         });
@@ -67,7 +67,7 @@ module.exports = {
           tokens
         })
       } else {
-        res.status(200).json({
+        res.status(400).json({
           sucess: false,
           errors: { password: 'Password is not valid' }
         });

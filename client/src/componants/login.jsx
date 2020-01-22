@@ -6,7 +6,14 @@ import { ForgotBtn } from './ForgotPassword';
 import axios from "axios";
 
 export class Login extends Component {
-  state = { username: "", password: "" };
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            username: "",
+            password: ""
+        };
+    }
   handleChange = event => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
@@ -15,9 +22,16 @@ export class Login extends Component {
   userStorage = async event => {
     event.preventDefault();
     const { username, password } = this.state
-    const { data } = await axios.post("/api/auth/login", { username, password });
-    console.log(data);
-    this.props.onLogin(false)
+    try {
+
+        const response = await axios.post("/api/auth/login", { username, password });
+        console.log(response);
+        console.log(response.data);
+        this.props.onLogin(false)
+    } catch (err) {
+        console.log('error:', err);
+    }
+    
   }
   render() {
     const { props } = this
@@ -81,11 +95,12 @@ export function Loginbtn() {
         className="navitem2"
         variant="warning"
         onClick={() => setModalShow(true)}
+        
       >
         Login <i class="fas fa-shopping-cart"></i>
       </Button>
 
-      <Login show={modalShow} onHide={() => setModalShow(false) } onLogin={setModalShow} />
+      <Login show={modalShow} onHide={() => setModalShow(false) } onLogin={setModalShow}/>
     </ButtonToolbar>
   );
 }
