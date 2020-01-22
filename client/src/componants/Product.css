@@ -44,7 +44,6 @@
 }
 .Product-buy-button:active{
   background-color: #b3ffb3;
-  /* box-shadow: 0 5px #666; */
   transform: translateY(4px);
 }
 
