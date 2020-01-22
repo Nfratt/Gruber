@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 
-export class createAcct extends Component {
+export class CreateAcct extends Component {
     constructor(props) {
         super(props);
 
@@ -142,7 +142,7 @@ export function AcctBttn() {
 		  Create Account <i className="fas create-account"></i>
 		</Button>
   
-		<createAcct show={modalShow} onHide={() => setModalShow(false)} />
+		<CreateAcct show={modalShow} onHide={() => setModalShow(false)} />
 	  </ButtonToolbar>
 	);
   }
