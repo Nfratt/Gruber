@@ -42,7 +42,7 @@ export function CheckoutBtn() {
  return (
    <ButtonToolbar>
      <Button variant="primary" onClick={() => setModalShow(true)}>
-       Checkout <i class="fas fa-shopping-cart"></i>
+       Checkout <i className="fas fa-shopping-cart"></i>
      </Button>
 
      <Checkout
