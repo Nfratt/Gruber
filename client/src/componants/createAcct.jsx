@@ -41,7 +41,7 @@ export class CreateAcct extends Component {
         lastName,
         username,
         email,
-        passwordHash,
+        password,
       });
       console.log(response);
       console.log(response.data);
