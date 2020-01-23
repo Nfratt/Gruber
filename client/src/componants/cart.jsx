@@ -61,7 +61,7 @@ export function CartBtn() {
   return (
     <ButtonToolbar>
       <Button className="navitem1" variant="success" onClick={() => setModalShow(true)}>
-        Shopping Cart <i class="fas fa-shopping-cart"></i>
+        Shopping Cart <i className="fas fa-shopping-cart"></i>
       </Button>
 
 
