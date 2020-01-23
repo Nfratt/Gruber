@@ -6,25 +6,39 @@
  */
 
 
-import { ADD, REMOVE } from "../actionTypes";
+import { ADD_TO_CART, REMOVE_FROM_CART } from "../actionTypes";
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case ADD: {
+        case ADD_TO_CART: {
+
             console.log('running')
+            let newTotal = state.total + action.payload.product.price 
             return {
                 ...state,
-                products: [...state.products, action.payload.product]
+                products: [...state.products, action.payload.product],
+                total: newTotal
             };
         }
-        case REMOVE: {
-            // remove all tokens from local storage
+        case REMOVE_FROM_CART: {
+            // let itemToRemove = state.products.find(item => action.id === item.id)
+            let new_items = state.products.filter(product => action.product !== product.id)
+
+            //calculating the total
+            // let newTotal = state.total - (itemToRemove.price * itemToRemove.quantity)
         
             return {
                 ...state,
-                products:[...state.products, action.payload.product]
-            };
+                products: new_items,
+                // total: newTotal
+            }
         }
+
+        // return {
+        //     ...state,
+        //     products:[...state.products, action.payload.product]
+        // };
+        // }
         default:
             return {
                 ...state,
@@ -34,5 +48,6 @@ export default function (state = initialState, action) {
 }
 
 export const initialState = {
-    products: []
+    products: [],
+    total: 0
 };
