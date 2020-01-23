@@ -29,15 +29,19 @@ export class CreateAcct extends Component {
       email,
       password,
       passwordConfirm,
-    } = this.state;
+	} = this.state;
+	console.log(password);
+	console.log(passwordConfirm);
+	//if passwords match
+
+	//then save the password hash to the database one time as "password"
     try {
       const response = await axios.post('/api/auth/signup', {
         firstName,
         lastName,
         username,
         email,
-        password,
-        passwordConfirm,
+        passwordHash,
       });
       console.log(response);
       console.log(response.data);
