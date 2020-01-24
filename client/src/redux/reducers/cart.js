@@ -13,24 +13,27 @@ export default function (state = initialState, action) {
         case ADD_TO_CART: {
 
             console.log('running')
-            let newTotal = state.total + action.payload.product.price
+            let newTotal = +state.total + +action.payload.product.price
+            console.log(newTotal)
             return {
                 ...state,
                 products: [...state.products, action.payload.product],
                 total: newTotal
             };
+            
         }
         case REMOVE_FROM_CART: {
             // let itemToRemove = state.products.find(item => action.id === item.id)
             let new_items = state.products.filter(product => action.payload.product._id !== product._id)
-
+            let newTotal = +state.total - +action.payload.product.price
             //calculating the total
             // let newTotal = state.total - (itemToRemove.price * itemToRemove.quantity)
-        debugger
+       
+        console.log(newTotal)
             return {
                 ...state,
                 products: new_items,
-                // total: newTotal
+                total: newTotal
             }
         }
 
