@@ -21,7 +21,7 @@ export class CreateAcct extends Component {
       password,
 
       passwordConfirm,
-	} = this.state;
+	} = this.setState;
 	console.log(password);
 	console.log(passwordConfirm);
 	//if passwords match
