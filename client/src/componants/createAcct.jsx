@@ -19,7 +19,7 @@ export class CreateAcct extends Component {
     const { data } = await axios.post('/api/auth/signup', {
       username,
       password,      
-  });ç
+  });
   console.log(data)
 	//if passwords match
 
