@@ -56,14 +56,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="background">
-        <Container className="productcontainer">
-          <img className="logo" src={Logo} alt="Gruberlogo logo" />
-          <h3>Get your Groceries on Demand!!</h3>
-          <Navbar>
+                  <Navbar>
             {/* <Cart /> */}
             <Login />
           </Navbar>
+        {/* <Container className="productcontainer"> */}
+          <img className="logo" src={Logo} alt="Gruberlogo logo" />
+          <h3>Get your Groceries on Demand!!</h3>
+
           <div className="App">
+
             <div className="App-products">
               {this.state.groceryItems.map(item => {
                console.log(item)
@@ -71,12 +73,12 @@ class App extends React.Component {
                   key={item.itemName}
                   item = {item}
                 />
-              
-               })}
 
-            </div>
+              ))}
+              </div>
+
           </div>
-        </Container>
+        {/* </Container> */}
         <Footer />
       </div>
     );

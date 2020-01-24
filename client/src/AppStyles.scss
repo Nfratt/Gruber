@@ -3,13 +3,13 @@
 @import "~bootswatch/dist/cosmo/bootswatch";
 
 #navbkrd{
-    background-image: linear-gradient(to bottom right, greenyellow, #80ff80
+    background-image: linear-gradient(to bottom right, #80ff80,#31ad62
     );
     height: 125px;
 }
 .logo{
-    padding-left: 37%;
-    padding-right: 35%;
+margin-left: 45%;
+margin-right: 30%;
 }
 .head{
     color: greenyellow;
@@ -19,16 +19,17 @@
  font-size: xx-large;
     
 }
+
 h3{    
-    color: #33cc33;
+    color: #80ff80;
     font-family: 'Anton', sans-serif;
-    padding-left: 36%;
+    padding-left: 44%;
     padding-right: 30%;
 }
-.productcontainer{
-    background-color: #ffffcc;
+// .productcontainer{
+//     background-color: #ffffcc;
 
-}
+// }
 .background{
    background-image: url(./componants/images/autumnal-fruits.jpg);
 }
@@ -65,15 +66,68 @@ h3{
         width: 100%;
         bottom: 0;
       }
+.App-products{
+display: flex;
+flex-wrap: wrap;
 
+}
 
 .login {
     text-align: center;
     justify-content: center;
+   
 }
 
 .acctCreate {
     text-align: center;
     justify-content: center;
 }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 640px) {
+    .logo{
+        padding-left: 0%;
+    
+    }
+    
+#navbkrd{
+    background-image: linear-gradient(to bottom right, #B1E10E , #06751E
+    );
+    height: 90px;
+}
+    .navitem1{
+        height: 50px;
+        width: 70px;
+        font-size: xx-small;
+
+    }
+
+    .navitem2{
+        height: 50px;
+        width: 70px;
+        font-size: xx-small;
+    }
+    .productcontainer{
+        background-image:url(./componants/images/woodtabel.jpg) ;
+    
+    }
+    h3{
+        color: white;
+    }
+    .product-description{
+        color: white;
+    }
+    .Product-title {
+    color: white;
+      }
+      .Product-price{
+          color: white;
+      }
+      Modal{
+          background-color: black;
+      }
+      
+  }
+   /* Medium devices (landscape tablets, 768px and up) */
+   @media only screen and (min-width: 768px) {}
 

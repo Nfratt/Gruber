@@ -1,16 +1,19 @@
 .Product {
-  border: 1px solid #eee;
-  margin: 1rem 0;
-  padding: 1rem;
-  
+  border: 1px solid #33cc33 ;
+  margin: 10px;
+  padding: 20px;
+  background-image: linear-gradient(to top left,#31ad62,#00f561);
+  /* justify-content: sace-between; */
 }
 
 
 .Product-title {
-  font-size: 16px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .Product-price {
+  font-size: 20px;
   margin-bottom: 1rem;
 }
 
@@ -29,7 +32,7 @@
   font-weight: 600;
   line-height: 1;
   text-align: center;
-  background-color: #33cc33;
+  background-color:  #31ad62;
   color: #fff;
   cursor: pointer;
   transition-property: background-color, color;
@@ -50,6 +53,7 @@
 @media (min-width: 800px) {
   .Product {
     margin: 0 1rem;
-    width: 33.3333%;
+    width: 20%;
+    justify-content: space-between;
   }
 }

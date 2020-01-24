@@ -59,9 +59,9 @@ const foodSeed = [
 
   },
   {
-    itemName: "Coca Cola six pack of cans",
+    itemName: "Coca Cola",
     price: "6.99",
-    description: "A soft drink.",
+    description: "A six pack soft drink.",
     category: "Soda",
     image:"https://www.meijer.com/content/dam/meijer/product/0004/90/0006/10/0004900006101_1_A1C1_1200.png"
 
@@ -90,6 +90,20 @@ const foodSeed = [
     category: "Pasta",
     image:"https://res.cloudinary.com/nassau-candy/image/upload/c_fit,w_1000,h_1000,f_auto/921180.jpg"
 
+  },
+  {
+    itemName: "Orange Juice",
+    price: "5.25",
+    description: "Orange juice is a liquid extract of the orange tree fruit, produced by squeezing or reaming oranges.",
+    category: "Refrigeration",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4EoLK0PZPyBrgT0jZp_s7AYrJfqfK09fjcI8JFbi_eoZWStbjsw&s"
+  },
+  {
+    itemName: "Orange Juice",
+    price: "5.25",
+    description: "Penne is an extruded type of pasta with cylinder-shaped pieces, their ends cut at a bias.",
+    category: "Refrigeration",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4EoLK0PZPyBrgT0jZp_s7AYrJfqfK09fjcI8JFbi_eoZWStbjsw&s"
   },
 
 ];

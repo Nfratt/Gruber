@@ -5,12 +5,12 @@ import { CartBtn } from "./cart";
 import {  Loginbtn } from "./login";
 import { EditBtn } from "./editAcct"
 
+
 export default function Navbar(props){
     return(
 <Nav className="justify-content-end" id="navbkrd" defaultActiveKey="/home">
     <Loginbtn className="navitem"/>
     <CartBtn className="navitem"/>
-    <EditBtn className="gruber-btn"/>
 </Nav>
     )
 }
