@@ -13,7 +13,7 @@ const routes = require("./routes");
 // const axios = require("axios");
 
 //Stripe Payment//  
-const stripe = require("stripe")("sk_test_ZrMs5whpughrXiBk61CFnVyN009OcQ6LD5");
+const stripe = require("stripe")(process.env.REACT_APP_STRIPE_API_KEY)
 app.use(require("body-parser").text());
 
 
