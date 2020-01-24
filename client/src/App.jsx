@@ -67,16 +67,16 @@ class App extends React.Component {
           <div className="App">
 
             <div className="App-products">
-              {this.state.groceryItems.map(item => (
-                <Product
-                  key={item.title}
-                  title={item.itemName}
-                  image={item.image}
-                  description={item.description}
-                  price={item.price}
+              {this.state.groceryItems.map(item => {
+               console.log(item)
+              return  <Product
+                  key={item.itemName}
+                  item = {item}
                 />
+
               ))}
               </div>
+
           </div>
         {/* </Container> */}
         <Footer />

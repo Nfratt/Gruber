@@ -1,17 +1,17 @@
 import React from 'react';
 import './Product.css';
+import { onRemove } from '../redux/actions'
+import { connect } from 'react-redux'
 
-
-export default function CartItem({onRemove, price, title, description, image}) {
+function CartItem({onRemove, item}) {
     return (
         <div className="Product">
-            <h2 className="Product-title">{title}</h2>
-            <img className="product-image" src={image} alt=""/>
-            <div className="Product-price">${price}</div>
-            <div className="product-description">{description}</div>
+            <h2 className="Product-title">{item.itemName}</h2>
+            <img className="product-image" src={item.image} alt=""/>
+            <div className="Product-price">${item.price}</div>
             <button className="Product-buy-button" onClick={() => {
-                console.log({ title, price, description, image })
-                onRemove({ title, price, description, image })
+            console.log(item)
+                onRemove(item)
             }
             }>
                 Remove from cart
@@ -19,3 +19,11 @@ export default function CartItem({onRemove, price, title, description, image}) {
         </div>
     );
 }
+
+
+export default connect(
+    // mapStateToProps
+    null,
+    // mapDispatchToProps
+    { onRemove }
+)(CartItem);

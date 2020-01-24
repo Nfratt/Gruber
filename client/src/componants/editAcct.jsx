@@ -33,7 +33,7 @@ export function EditBtn() {
  return (
    <ButtonToolbar>
      <Button className="navitem2" variant="warning" onClick={() => setModalShow(true)}>
-       Edit Account <i class="gruber-btn"></i>
+       Edit Account <i className="gruber-btn"></i>
      </Button>
 
      <EditAcct

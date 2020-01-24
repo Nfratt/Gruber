@@ -1,14 +1,5 @@
-import { LOGIN, LOGOUT, ADD, REMOVE } from "./actionTypes";
+import { LOGIN, LOGOUT, ADD_TO_CART, ADD_QUANTITY, REMOVE_FROM_CART, REM_QUANTITY } from "./actionTypes";
 
-/**
- * 
- * Actions are payloads of information that send data from your application to your store.
- * They are the only source of information for the store.
- * @see {@link https://redux.js.org/basics/actions}
- */
-
-// Fill in the properties that need to be returned
-// in each action
 export const onLogin = (tokens) => ({
     type: LOGIN,
     payload: { tokens }
@@ -19,11 +10,25 @@ export const onLogout = () => ({
 });
 
 export const onAdd = (product) => ({
-    type: ADD,
+    type: ADD_TO_CART,
     payload: { product }
 
 });
 export const onRemove = (product) => ({
-    type: REMOVE,
+    type: REMOVE_FROM_CART,
     payload: { product }
 });
+
+export const subtractQuantity=(product)=>{
+    return{
+        type: REM_QUANTITY,
+        payload: { product }
+    }
+}
+
+export const addQuantity=(product)=>{
+    return{
+        type: ADD_QUANTITY,
+        payload: {product}
+    }
+}
