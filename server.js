@@ -28,13 +28,14 @@ if (process.env.NODE_ENV === "production") {
 //   API routes 
 
 //Stripe Payment/
-app.post("/charge", async (req, res) => {
+app.post("/api/charge", async (req, res) => {
+  console.log(req.body)
   try {
     let {status} = await stripe.charges.create({
-      amount: 2000,
+      amount: req.body.total,
       currency: "usd",
-      description: "Rachael Testing",
-      source: req.body
+      description: "Gruber Purchase",
+      source: req.body.stripeTokenId
     });
 
     res.json({status});

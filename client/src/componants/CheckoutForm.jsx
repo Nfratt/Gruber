@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {CardElement, injectStripe} from 'react-stripe-elements';
-
+import { connect } from 'react-redux'
+import API from '../api'
 
 class CheckoutForm extends Component {
   constructor(props) {
@@ -12,17 +13,21 @@ class CheckoutForm extends Component {
   async submit(ev) {
 
     let {token} = await this.props.stripe.createToken({name: "Name"});
-    let response = await fetch("/charge", {
-      method: "POST",
-      headers: {"Content-Type": "text/plain"},
-      body: token.id
-      
+   
+
+    let response = await API.charge({
+      total: this.props.totalPrice,
+      stripeTokenId: token.id
     });
+
+
   
-    if (response.ok) console.log("Purchase Complete!")
+    if (response.status == 'succeeded') console.log("Purchase Complete!");
+    //create empty cart logic here
+    //
 
     
-    if (response.ok) this.setState({complete: true});
+    if (response.status == 'succeeded') this.setState({complete: true});
   }
     
 
@@ -41,4 +46,18 @@ class CheckoutForm extends Component {
 }
 
 
-export default injectStripe(CheckoutForm);
+
+
+const connectedCheckoutForm = connect(
+  // mapStateToProps
+  state => {
+    console.log(state);
+    return {
+      totalPrice: state.cart.total
+    }
+  },
+  // mapDispatchToProps
+  null
+)(injectStripe(CheckoutForm));
+
+export default connectedCheckoutForm

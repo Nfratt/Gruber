@@ -18,7 +18,12 @@ export default {
     },
     protected: {
       ...protectedAPI
+    },
+
+    charge: function({stripeTokenId, total}) {
+      return axios.post('api/charge', {stripeTokenId, total}).then(res => res.data);
     }
+    
  
 };
 

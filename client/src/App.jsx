@@ -56,29 +56,29 @@ class App extends React.Component {
   render() {
     return (
       <div className="background">
-                  <Navbar>
-            {/* <Cart /> */}
-            <Login />
-          </Navbar>
+        <Navbar>
+          {/* <Cart /> */}
+          <Login />
+        </Navbar>
         {/* <Container className="productcontainer"> */}
-          <img className="logo" src={Logo} alt="Gruberlogo logo" />
-          <h3>Get your Groceries on Demand!!</h3>
+        <img className="logo" src={Logo} alt="Gruberlogo logo" />
+        <h3>Get your Groceries on Demand!!</h3>
 
-          <div className="App">
+        <div className="App">
 
-            <div className="App-products">
-              {this.state.groceryItems.map(item => {
-               console.log(item)
-              return  <Product
-                  key={item.itemName}
-                  item = {item}
-                />
+          <div className="App-products">
+            {this.state.groceryItems.map(item => {
+              console.log(item)
+              return <Product
+                key={item.itemName}
+                item={item}
+              />
 
-  })}
-
-              </div>
+            })}
 
           </div>
+
+        </div>
         {/* </Container> */}
         <Footer />
       </div>
