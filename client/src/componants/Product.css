@@ -1,9 +1,9 @@
 .Product {
   border: 1px solid #33cc33 ;
-  margin: 1rem 0;
-  padding: 1rem;
+  margin: 10px;
+  padding: 20px;
   background-image: linear-gradient(to top left,#31ad62,#00f561);
-  
+  justify-content: space-between;
 }
 
 
@@ -51,6 +51,7 @@
 @media (min-width: 800px) {
   .Product {
     margin: 0 1rem;
-    width: 33.3333%;
+    width: 20%;
+    justify-content: space-between;
   }
 }

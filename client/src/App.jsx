@@ -56,15 +56,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="background">
-        <Container className="productcontainer">
-          <img className="logo" src={Logo} alt="Gruberlogo logo" />
-          <h3>Get your Groceries on Demand!!</h3>
-          <Navbar>
+                  <Navbar>
             {/* <Cart /> */}
             <Login />
           </Navbar>
-          <span className="spacer"/>
+        {/* <Container className="productcontainer"> */}
+          <img className="logo" src={Logo} alt="Gruberlogo logo" />
+          <h3>Get your Groceries on Demand!!</h3>
+
           <div className="App">
+
             <div className="App-products">
               {this.state.groceryItems.map(item => (
                 <Product
@@ -75,9 +76,9 @@ class App extends React.Component {
                   price={item.price}
                 />
               ))}
-            </div>
+              </div>
           </div>
-        </Container>
+        {/* </Container> */}
         <Footer />
       </div>
     );

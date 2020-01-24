@@ -8,8 +8,8 @@
     height: 125px;
 }
 .logo{
-    padding-left: 37%;
-    padding-right: 35%;
+margin-left: 45%;
+margin-right: 30%;
 }
 .head{
     color: greenyellow;
@@ -19,15 +19,11 @@
  font-size: xx-large;
     
 }
-.spacer{
-    background-color: transparent;
-    height: 100px;
-    width: 150px;
-}
+
 h3{    
-    color: #33cc33;
+    color: #80ff80;
     font-family: 'Anton', sans-serif;
-    padding-left: 36%;
+    padding-left: 44%;
     padding-right: 30%;
 }
 // .productcontainer{
@@ -70,7 +66,11 @@ h3{
         width: 100%;
         bottom: 0;
       }
+.App-products{
+display: flex;
+flex-wrap: wrap;
 
+}
 
 .login {
     text-align: center;
