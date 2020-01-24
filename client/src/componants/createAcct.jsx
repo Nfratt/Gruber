@@ -19,11 +19,29 @@ export class CreateAcct extends Component {
     const { data } = await axios.post('/api/auth/signup', {
       username,
       password,
-      firstName,
-      lastName,
-    });
-    console.log(data);
-    // this.props.onLogin(false);
+
+      passwordConfirm,
+	} = this.state;
+	console.log(password);
+	console.log(passwordConfirm);
+	//if passwords match
+
+	//then save the password hash to the database one time as "password"
+    try {
+      const response = await axios.post('/api/auth/signup', {
+        firstName,
+        lastName,
+        username,
+        email,
+        password,
+      });
+      console.log(response);
+      console.log(response.data);
+      this.props.onLogin(false);
+    } catch (err) {
+      console.log('error:', err);
+    }
+
   };
   render() {
     const { props } = this;
