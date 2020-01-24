@@ -56,12 +56,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="background">
-                  <Navbar>
-            {/* <Cart /> */}
+                  <Navbar className="navbkrd">
             <Login />
           </Navbar>
-        {/* <Container className="productcontainer"> */}
-          <img className="logo" src={Logo} alt="Gruberlogo logo" />
           <h3>Get your Groceries on Demand!!</h3>
 
           <div className="App">
@@ -79,7 +76,6 @@ class App extends React.Component {
               </div>
 
           </div>
-        {/* </Container> */}
         <Footer />
       </div>
     );
