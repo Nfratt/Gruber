@@ -74,7 +74,8 @@ class App extends React.Component {
                   item = {item}
                 />
 
-              ))}
+  })}
+
               </div>
 
           </div>
