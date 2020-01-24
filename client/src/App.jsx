@@ -56,26 +56,27 @@ class App extends React.Component {
   render() {
     return (
       <div className="background">
-                  <Navbar className="navbkrd">
+
+          <Navbar className="navbkrd">
             <Login />
           </Navbar>
           <h3>Get your Groceries on Demand!!</h3>
 
-          <div className="App">
 
-            <div className="App-products">
-              {this.state.groceryItems.map(item => {
-               console.log(item)
-              return  <Product
-                  key={item.itemName}
-                  item = {item}
-                />
+        <div className="App">
 
-  })}
+          <div className="App-products">
+            {this.state.groceryItems.map(item => {
+              console.log(item)
+              return <Product
+                key={item.itemName}
+                item={item}
+              />
 
-              </div>
+            })}
 
           </div>
+
         <Footer />
       </div>
     );
