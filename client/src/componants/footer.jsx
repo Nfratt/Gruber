@@ -12,6 +12,8 @@ export default function Footer(){
               About us:
               We are a small group of developers with an idea to modernize grocery shopping. Our idea became Gruber&reg; 
               an even more convienient grocery delivery service.
+              <br></br>
+              logo created: With FreeLogoDesign
           </p>
       </span>
       <span>Gruber team:
