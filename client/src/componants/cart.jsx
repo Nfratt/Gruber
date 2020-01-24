@@ -7,10 +7,11 @@ import { connect } from 'react-redux'
 import CartItem from './CartItem'
 
 function Cart(props) {
-  console.log(props.cartItems)
+  console.log(props)
   return (
     <Modal
-      {...props}
+      show = {props.show}
+      onHide = {props.onHide}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -24,11 +25,8 @@ function Cart(props) {
 
       {props.cartItems.map(item => (
                 <CartItem
-                  key={item.title}
-                  title={item.title}
-                  image={item.image}
-                  description={item.description}
-                  price={item.price}
+                  key={item.itemName}
+                  item = {item}
                 />
               ))}
 
@@ -60,8 +58,10 @@ export function CartBtn() {
 
   return (
     <ButtonToolbar>
-      <Button className="navitem1" onClick={() => setModalShow(true)}>
-        Shopping Cart <i class="fas fa-shopping-cart"></i>
+
+      <Button className="navitem1" variant="success" onClick={() => setModalShow(true)}>
+        Shopping Cart <i className="fas fa-shopping-cart"></i>
+
       </Button>
 
 
