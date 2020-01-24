@@ -3,6 +3,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 import CheckoutForm from './CheckoutForm';
+import {initialState} from '../redux/reducers/cart'
 
 export function Checkout(props) {
  return (
@@ -20,6 +21,7 @@ export function Checkout(props) {
        </Modal.Title>
      </Modal.Header>
      <Modal.Body>
+    
        <p>
        <StripeProvider apiKey="pk_test_hAdtEwXkn7tEEo0tmBIofNuf00R7L68wMO">
       <div className="example">
