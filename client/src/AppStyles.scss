@@ -5,12 +5,13 @@
 #navbkrd{
     background-image: linear-gradient(to bottom right, #80ff80,#31ad62
     );
-    height: 125px;
+    height: 200px;
+    // justify-content: center !important;
 }
 .logo{
-margin-left: 45%;
-margin-right: 30%;
+ margin-left: 45%;
 }
+
 .head{
     color: greenyellow;
     font-family: 'Anton', sans-serif;
@@ -39,15 +40,18 @@ h3{
     font-family: 'Anton', sans-serif;
     margin: 10px;
     position: relative;
-    margin-top: 25px;
+    margin-top: 50px; 
+margin-left: 25px;
+
 }
 
 .navitem2{
     height: 75px;
     width: 100px;
     font-family: 'Anton', sans-serif;
-    margin:10px ;
-    margin-top: 25px;   
+    margin-top: 50px;   
+    margin-left: 200px;
+
 }
 
 #ctnshoppin{
@@ -86,8 +90,7 @@ flex-wrap: wrap;
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 640px) {
     .logo{
-        padding-left: 0%;
-    
+        float: left;
     }
     
 #navbkrd{
@@ -99,7 +102,6 @@ flex-wrap: wrap;
         height: 50px;
         width: 70px;
         font-size: xx-small;
-
     }
 
     .navitem2{
