@@ -22,7 +22,7 @@ export const onRemove = (product) => ({
 export const subtractQuantity=(product)=>{
     return{
         type: REM_QUANTITY,
-        payload: {product}
+        payload: { product }
     }
 }
 

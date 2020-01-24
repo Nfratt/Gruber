@@ -3,18 +3,18 @@ import './Product.css';
 import { onAdd } from '../redux/actions'
 import { connect } from 'react-redux'
 
-function Product({ onAdd, price, title, description, image }) {
+function Product({ onAdd, item}) {
     return (
         <div className="Product">
-            <h2 className="Product-title">{title}</h2>
-            <img className="product-image" src={image} alt="product on our store (renders multiple times)"/>
-            <div className="Product-price">${price}</div>
-            <div className="product-description">{description}</div>
+            <h2 className="Product-title">{item.itemName}</h2>
+            <img className="product-image" src={item.image}/>
+            <div className="Product-price">${item.price}</div>
+            <div className="product-description">{item.description}</div>
             <button className="Product-buy-button" onClick={() => {
-                console.log({ title, price, description, image })
-                onAdd({ title, price, description, image })
+                console.log({ item})
+                onAdd(item)
             }
-            }>
+            }>  
                 Add to cart
       </button>
         </div>
