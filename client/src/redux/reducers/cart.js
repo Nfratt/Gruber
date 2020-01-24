@@ -1,11 +1,3 @@
-/**
- * Reducers specify how the application's state changes in response to actions sent to the store.
- * Remember that actions only describe what happened, but don't describe how the application's state changes.
- * @see {@link https://redux.js.org/basics/reducers}
- * 
- */
-
-
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../actionTypes";
 
 export default function (state = initialState, action) {
@@ -13,7 +5,7 @@ export default function (state = initialState, action) {
         case ADD_TO_CART: {
 
             console.log('running')
-            let newTotal = +state.total + +action.payload.product.price
+            let newTotal = (+state.total  + (+action.payload.product.price * 100))
             console.log(newTotal)
             return {
                 ...state,
@@ -25,23 +17,14 @@ export default function (state = initialState, action) {
         case REMOVE_FROM_CART: {
             // let itemToRemove = state.products.find(item => action.id === item.id)
             let new_items = state.products.filter(product => action.payload.product._id !== product._id)
-            let newTotal = +state.total - +action.payload.product.price
-            //calculating the total
-            // let newTotal = state.total - (itemToRemove.price * itemToRemove.quantity)
-       
-        console.log(newTotal)
+            let newTotal = (+state.total - (+action.payload.product.price * 100))
+         console.log(newTotal)
             return {
                 ...state,
                 products: new_items,
                 total: newTotal
             }
         }
-
-        // return {
-        //     ...state,
-        //     products:[...state.products, action.payload.product]
-        // };
-        // }
         default:
             return {
                 ...state,
