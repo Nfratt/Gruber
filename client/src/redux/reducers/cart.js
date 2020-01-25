@@ -26,10 +26,7 @@ export default function (state = initialState, action) {
             }
         }
         default:
-            return {
-                ...state,
-                products: []
-            };
+            return state
     }
 }
 
@@ -37,3 +34,16 @@ export const initialState = {
     products: [],
     total: 0
 };
+
+
+/* 
+    {
+        cart: {
+            products: [],
+            total: 0
+        },
+        user: ...
+    }
+
+
+*/
