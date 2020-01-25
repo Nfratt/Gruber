@@ -35,7 +35,8 @@ app.post("/api/charge", async (req, res) => {
       amount: req.body.total,
       currency: "usd",
       description: "Gruber Purchase",
-      source: req.body.stripeTokenId
+      source: req.body.stripeTokenId,
+      receipt_email:"lionheartofdacity@gmail.com",
     });
 
     res.json({status});
