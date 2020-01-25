@@ -17,7 +17,7 @@ import {onLogout} from '../redux/actions'
 function Navbar(props){
     return(
 <Nav  id="navbkrd" defaultActiveKey="/home">
-<img className="logo" src={Logo} alt="Gruberlogo logo" />
+<img className="logo" src={Logo} alt="Gruberlogo logo"></img>
     {!props.user.isLoggedIn ? <Loginbtn className="navitem"/>: <Button onClick={props.onLogout}>  logout</Button>}
     <CartBtn className="navitem"/>
 </Nav>
