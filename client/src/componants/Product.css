@@ -18,8 +18,8 @@
 }
 
 .product-image{
-  height: 200px;
-  width: 200px;
+  height: 55%;
+  width: 100%;
 }
 .Product-buy-button {
   display: inline-block;

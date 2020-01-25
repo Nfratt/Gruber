@@ -9,7 +9,8 @@
     // justify-content: center !important;
 }
 .logo{
- margin-left: 45%;
+ margin-left:45%;
+ margin-right: 25%;
 }
 
 .head{
@@ -27,10 +28,6 @@ h3{
     padding-left: 44%;
     padding-right: 30%;
 }
-// .productcontainer{
-//     background-color: #ffffcc;
-
-// }
 .background{
    background-image: url(./componants/images/autumnal-fruits.jpg);
 }
@@ -38,10 +35,9 @@ h3{
 .navitem1{
     height: 75px;
     font-family: 'Anton', sans-serif;
-    margin: 10px;
     position: relative;
-    margin-top: 50px; 
-margin-left: 25px;
+    margin-top: 50%; 
+    margin-left: 10%;
 
 }
 
@@ -49,9 +45,9 @@ margin-left: 25px;
     height: 75px;
     width: 100px;
     font-family: 'Anton', sans-serif;
-    margin-top: 50px;   
-    margin-left: 200px;
+    margin-top: 55%; 
 
+;
 }
 
 #ctnshoppin{
@@ -89,12 +85,14 @@ flex-wrap: wrap;
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 640px) {
-    .logo{
-        float: left;
-    }
+      .logo{
+          margin-left: 2%;
+          margin-right: 25%;
+      }
+
     
 #navbkrd{
-    background-image: linear-gradient(to bottom right, #B1E10E , #06751E
+    background-image: linear-gradient(to bottom right, #B1E10E , rgb(61, 172, 103)
     );
     height: 90px;
 }
@@ -108,10 +106,6 @@ flex-wrap: wrap;
         height: 50px;
         width: 70px;
         font-size: xx-small;
-    }
-    .productcontainer{
-        background-image:url(./componants/images/woodtabel.jpg) ;
-    
     }
     h3{
         color: white;
@@ -130,6 +124,3 @@ flex-wrap: wrap;
       }
       
   }
-   /* Medium devices (landscape tablets, 768px and up) */
-   @media only screen and (min-width: 768px) {}
-
