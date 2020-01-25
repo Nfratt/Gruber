@@ -18,7 +18,7 @@ function Navbar(props){
     return(
 <Nav  id="navbkrd" defaultActiveKey="/home">
 <img className="logo" src={Logo} alt="Gruberlogo logo"></img>
-    {!props.user.isLoggedIn ? <Loginbtn className="navitem"/>: <Button onClick={props.onLogout}>  logout</Button>}
+    {!props.user.isLoggedIn ? <Loginbtn className="navitem"/>: <Button className="logout" onClick={props.onLogout}>  logout</Button>}
     <CartBtn className="navitem"/>
 </Nav>
     )
