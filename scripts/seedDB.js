@@ -69,8 +69,8 @@ const foodSeed = [
 
   {
     itemName: "Shrimp",
-    price: "24.99 per lbs",
-    description: "a crustation that swims through the sea  (please note:common allergy)",
+    price: "24.99",
+    description: "(price per lbs) a crustation that swims through the sea  (please note:common allergy)",
     category: "Seafood",
     image:"https://s3.amazonaws.com/cdn.legalseafoods.com/images/recipes/8.jpg"
 
