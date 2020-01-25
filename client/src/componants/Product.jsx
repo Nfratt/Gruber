@@ -2,22 +2,26 @@ import React from 'react';
 import './Product.css';
 import { onAdd } from '../redux/actions'
 import { connect } from 'react-redux'
-
+import { Card } from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 function Product({ onAdd, item}) {
     return (
-        <div className="Product">
-            <h2 className="Product-title">{item.itemName}</h2>
-            <img className="product-image" src={item.image}/>
-            <div className="Product-price">${item.price}</div>
-            <div className="product-description">{item.description}</div>
-            <button className="Product-buy-button" onClick={() => {
+        <Card className="Product" style={{ width: '18rem' }}>
+  <Card.Img variant="top" src={item.image} />
+  <Card.Body>
+    <Card.Title>{item.itemName}</Card.Title>
+    <Card.Text>
+    {item.description}...${item.price}
+    </Card.Text>
+  </Card.Body>
+  <Card.Footer>
+  <Button variant="primary" className="Product-buy-button" onClick={() => {
                 console.log({ item})
                 onAdd(item)
             }
-            }>  
-                Add to cart
-      </button>
-        </div>
+            }>Add to cart</Button>
+  </Card.Footer>
+</Card>
     );
 }
 
