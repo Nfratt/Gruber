@@ -29,10 +29,12 @@ function Cart(props) {
                 />
               ))}
 
-       
+
+       <p>Your total is ${props.totalPrice / 100 }</p>
 
       </Modal.Body>
       <Modal.Footer>
+        
         <CheckoutBtn className="navitem" />
         <Button id="ctnshoppin" onClick={props.onHide}>Continue shopping</Button>
       </Modal.Footer>
@@ -45,7 +47,8 @@ const ConnectedCart = connect(
   state => {
     console.log(state);
     return {
-      cartItems: state.cart.products
+      cartItems: state.cart.products,
+      totalPrice: state.cart.total,
     }
   },
   // mapDispatchToProps
