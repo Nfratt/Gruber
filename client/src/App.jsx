@@ -7,6 +7,7 @@ import Product from "./componants/Product";
 import Footer from "./componants/footer";
 
 import API from './api';
+import { LOGIN } from "./redux/actionTypes";
 
 class App extends React.Component {
   // Setting the initial state of the App component
@@ -32,7 +33,7 @@ class App extends React.Component {
       <div className="background">
 
           <Navbar className="navbkrd">
-            <Login />
+            {/* <Login /> */}
           </Navbar>
           <h3>Get your Groceries on Demand!!</h3>
 

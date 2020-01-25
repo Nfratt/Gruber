@@ -1,10 +1,12 @@
 import { Modal, Button, ButtonToolbar } from 'react-bootstrap';
 import React, { Component } from 'react';
-
+//import { connect } from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+// import { ForgotBtn } from './ForgotPassword';
+import { Loginbtn } from './Loginbtn'
 
-import { Loginbtn } from './login'
+
 
 export class CreateAcct extends Component {
   state = { firstName: '', lastName: '', username: '', password: '' };

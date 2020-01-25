@@ -4,8 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { AcctBttn } from './createAcct';
 import { ForgotBtn } from './ForgotPassword';
 import axios from "axios";
+import { connect } from 'react-redux';
+import {onLogin} from '../redux/actions'
 
-export class Login extends Component {
+class Login extends Component {
     constructor(props) {
         super(props);
 
@@ -27,7 +29,8 @@ export class Login extends Component {
         const response = await axios.post("/api/auth/login", { username, password });
         console.log(response);
         console.log(response.data);
-        this.props.onLogin(false)
+        this.props.onLoginModal(false)
+        this.props.onLogin(response.data.tokens)
     } catch (err) {
         console.log('error:', err);
     }
@@ -86,21 +89,9 @@ export class Login extends Component {
     );
   }
 }
-export function Loginbtn() {
-  const [modalShow, setModalShow] = React.useState(false);
 
-  return (
-    <ButtonToolbar>
-      <Button
-        className="navitem2"
-        variant="warning"
-        onClick={() => setModalShow(true)}
-        
-      >
-        Login <i className="fas fa-shopping-cart"></i>
-      </Button>
+export default connect(null, {onLogin})(Login)
 
-      <Login show={modalShow} onHide={() => setModalShow(false) } onLogin={setModalShow}/>
-    </ButtonToolbar>
-  );
-}
+
+
+

@@ -2,16 +2,26 @@ import {Nav,} from 'react-bootstrap';
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CartBtn } from "./cart";
-import {  Loginbtn } from "./login";
+import {  Loginbtn } from "./Loginbtn";
 import Logo from "./images/Gruberlogo.png";
+import {connect} from 'react-redux';
+import {Button} from 'react-bootstrap'
+import {onLogout} from '../redux/actions'
 
 
-export default function Navbar(props){
+// import { STATES } from 'mongoose';
+
+
+
+
+function Navbar(props){
     return(
 <Nav  id="navbkrd" defaultActiveKey="/home">
 <img className="logo" src={Logo} alt="Gruberlogo logo" />
-    <Loginbtn className="navitem"/>
+    {!props.user.isLoggedIn ? <Loginbtn className="navitem"/>: <Button onClick={props.onLogout}>  logout</Button>}
     <CartBtn className="navitem"/>
 </Nav>
     )
 }
+const mapStateToProps =(state) => ({user:state.user})
+export default connect (mapStateToProps, {onLogout})(Navbar)

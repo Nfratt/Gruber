@@ -16,7 +16,8 @@ export default function (state = initialState, action) {
             new JotBrowser('refreshJwt', action.payload.tokens.refresh);
             return {
                 ...state,
-                details: setUserDetails()
+                details: setUserDetails(),
+                isLoggedIn: true
             };
         }
         case LOGOUT: {
@@ -28,7 +29,8 @@ export default function (state = initialState, action) {
 
             return {
                 ...state,
-                details: setUserDetails()
+                details: setUserDetails(),
+                 isLoggedIn: false
             };
         }
         default:
