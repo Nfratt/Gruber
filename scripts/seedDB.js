@@ -99,11 +99,11 @@ const foodSeed = [
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4EoLK0PZPyBrgT0jZp_s7AYrJfqfK09fjcI8JFbi_eoZWStbjsw&s"
   },
   {
-    itemName: "Orange Juice",
-    price: "5.25",
-    description: "Penne is an extruded type of pasta with cylinder-shaped pieces, their ends cut at a bias.",
-    category: "Refrigeration",
-    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4EoLK0PZPyBrgT0jZp_s7AYrJfqfK09fjcI8JFbi_eoZWStbjsw&s"
+    itemName: "Tostinos Queso",
+    price: "4",
+    description: "Spanish for 'chile with cheese', sometimes called simply queso, is a processed appetizer or side dish of melted cheese",
+    category: "Cheese product",
+      image:"https://www.iloveamericanfood.com/107361-large_default/sauce-medium-avec-du-fromage-tostitos-bocal-de-652-g.jpg"
   },
 
 ];
