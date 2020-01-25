@@ -7,10 +7,10 @@ import {Button} from 'react-bootstrap'
 function Product({ onAdd, item}) {
     return (
         <Card className="Product" style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={item.image} />
+  <Card.Img className="product-image" variant="top" src={item.image} />
   <Card.Body>
     <Card.Title>{item.itemName}</Card.Title>
-    <Card.Text>
+    <Card.Text className="product-price">
     {item.description}...${item.price}
     </Card.Text>
   </Card.Body>
