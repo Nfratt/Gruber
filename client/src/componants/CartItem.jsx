@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 function CartItem({onRemove, item}) {
     return (
-        <div className="Product">
+        <div className="Cart-Product">
             <h2 className="Product-title">{item.itemName}</h2>
             <img className="product-image" src={item.image} alt=""/>
             <div className="Product-price">${item.price}</div>
