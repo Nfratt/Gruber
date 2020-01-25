@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import {CardElement, injectStripe} from 'react-stripe-elements';
+import {CardElement, injectStripe, CardExpiryElement} from 'react-stripe-elements';
 import { connect } from 'react-redux'
 import API from '../api'
+import CartItem from './CartItem'
+import {Form, Button} from 'react-bootstrap'
 
 class CheckoutForm extends Component {
   constructor(props) {
@@ -28,18 +30,61 @@ class CheckoutForm extends Component {
 
     
     if (response.status == 'succeeded') this.setState({complete: true});
+  
+  
+    if (this.state.complete) return 
+   
+     
+
+  
   }
-    
+
 
   render() {
 
     if (this.state.complete) return <h1 className="head">Purchase Complete</h1>;
+    
+    // if (this.state.complete) cartItems.empty();
 
     return (
       <div className="checkout">
-        <p>Would you like to complete the purchase?</p>
+        <h2>Shipping Information</h2>
+<Form>
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>Street Address</Form.Label>
+    <Form.Control type="text" placeholder="12 Main Street" />
+  </Form.Group>
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>City</Form.Label>
+    <Form.Control type="text" placeholder="New York City" />
+  </Form.Group>
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>State</Form.Label>
+    <Form.Control type="text" placeholder="NY" />
+  </Form.Group>
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>Zip Code</Form.Label>
+    <Form.Control type="number" placeholder="000000" />
+  </Form.Group>
+</Form>
+
+
+<h2>Billing Information</h2>
+<Form>
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>Name on Card</Form.Label>
+    <Form.Control type="text" placeholder="Bob Smith" />
+  </Form.Group>
+</Form>
+
+<br></br>
+
         <CardElement />
-        <button onClick={this.submit}>Purchase</button>
+        <br></br>
+
+     
+        <Button variant="primary" size="lg" onClick={this.submit}>Purchase</Button>
+    
       </div>
     );
   }
@@ -51,9 +96,9 @@ class CheckoutForm extends Component {
 const connectedCheckoutForm = connect(
   // mapStateToProps
   state => {
-    console.log(state);
     return {
-      totalPrice: state.cart.total
+      totalPrice: state.cart.total,
+      cartItems: state.cart.products
     }
   },
   // mapDispatchToProps
