@@ -21,22 +21,11 @@ class CheckoutForm extends Component {
       total: this.props.totalPrice,
       stripeTokenId: token.id
     });
-
-
   
     if (response.status == 'succeeded') console.log("Purchase Complete!");
-    //create empty cart logic here
-    //
-
-    
     if (response.status == 'succeeded') this.setState({complete: true});
-  
-  
-    if (this.state.complete) return 
-   
-     
-
-  
+    if (this.state.complete) setTimeout(function(){  window.location.reload(false);  }, 1000);
+    
   }
 
 
@@ -44,7 +33,7 @@ class CheckoutForm extends Component {
 
     if (this.state.complete) return <h1 className="head">Purchase Complete</h1>;
     
-    // if (this.state.complete) cartItems.empty();
+
 
     return (
       <div className="checkout">
