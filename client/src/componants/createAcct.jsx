@@ -7,7 +7,6 @@ import axios from 'axios';
 import { Loginbtn } from './Loginbtn'
 
 
-
 export class CreateAcct extends Component {
   state = { firstName: '', lastName: '', username: '', password: '' };
   handleChange = event => {
@@ -17,10 +16,13 @@ export class CreateAcct extends Component {
   };
   userStorage = async event => {
     event.preventDefault();
-    const { username, password, firstName, lastName } = this.state;
+    const { username, password, firstName, lastName, email } = this.state;
     const { data } = await axios.post('/api/auth/signup', {
       username,
       password,      
+      firstName,
+      lastName,
+      email
   });
   console.log(data)
 	//if passwords match
@@ -32,6 +34,7 @@ export class CreateAcct extends Component {
         lastName,
         username,
         password,
+        email
       });
       console.log(response);
       console.log(response.data);
@@ -93,6 +96,7 @@ export class CreateAcct extends Component {
                           </div>
                         </div>
                       </div>
+                      
                       <div className="form-group">
                         <input
                           type="text"
@@ -101,6 +105,17 @@ export class CreateAcct extends Component {
                           id="username"
                           className="form-control input-lg"
                           placeholder="username"
+                          onChange={event => this.handleChange(event)}
+                        />
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          size="lg"
+                          name="email"
+                          id="email"
+                          className="form-control input-lg"
+                          placeholder="email"
                           onChange={event => this.handleChange(event)}
                         />
                       </div>

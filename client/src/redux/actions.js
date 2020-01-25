@@ -31,4 +31,6 @@ export const addQuantity=(product)=>{
         type: ADD_QUANTITY,
         payload: {product}
     }
+
+    
 }
