@@ -20,6 +20,7 @@ function Navbar(props){
 <img className="logo" src={Logo} alt="Gruberlogo logo"></img>
     {!props.user.isLoggedIn ? <Loginbtn className="navitem"/>: <Button className="logout" onClick={props.onLogout}>  logout</Button>}
     <CartBtn className="navitem"/>
+    {/* <SignupBtn className='navitem'></SignupBtn> */}
 </Nav>
     )
 }
