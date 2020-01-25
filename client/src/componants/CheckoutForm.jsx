@@ -14,9 +14,9 @@ class CheckoutForm extends Component {
 
   async submit(ev) {
 
+
     let {token} = await this.props.stripe.createToken({name: "Name"});
    
-
     let response = await API.charge({
       total: this.props.totalPrice,
       stripeTokenId: token.id
@@ -39,19 +39,19 @@ class CheckoutForm extends Component {
       <div className="checkout">
         <h2>Shipping Information</h2>
 <Form>
-  <Form.Group controlId="formBasicEmail">
+  <Form.Group controlId="shippingstreetaddress">
     <Form.Label>Street Address</Form.Label>
     <Form.Control type="text" placeholder="12 Main Street" />
   </Form.Group>
-  <Form.Group controlId="formBasicEmail">
+  <Form.Group controlId="shippingcity">
     <Form.Label>City</Form.Label>
     <Form.Control type="text" placeholder="New York City" />
   </Form.Group>
-  <Form.Group controlId="formBasicEmail">
+  <Form.Group controlId="shippingstate">
     <Form.Label>State</Form.Label>
     <Form.Control type="text" placeholder="NY" />
   </Form.Group>
-  <Form.Group controlId="formBasicEmail">
+  <Form.Group controlId="shippingzip">
     <Form.Label>Zip Code</Form.Label>
     <Form.Control type="number" placeholder="000000" />
   </Form.Group>
