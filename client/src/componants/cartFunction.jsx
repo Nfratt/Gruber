@@ -1,6 +1,6 @@
 import React from 'react';
 import CartItem from './CartItem';
-// import itemsInCart from './CartCalc'
+
 
 
 export default function CartFunction({ itemsInCart, totalCost }) {

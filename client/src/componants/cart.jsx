@@ -2,7 +2,6 @@ import { Modal, Button, ButtonToolbar } from 'react-bootstrap';
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CheckoutBtn } from "./checkout";
-// import  CartFunction  from "./cartFunction";
 import { connect } from 'react-redux'
 import CartItem from './CartItem'
 
