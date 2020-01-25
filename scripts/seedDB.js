@@ -76,9 +76,9 @@ const foodSeed = [
 
   },
   {
-    itemName: "Sweet potato",
+    itemName: "Sweet Potato",
     price: "5.00",
-    description: "is a dicotyledonous plant that belongs to the bindweed or morning glory family, Its large, starchy, sweet-tasting, tuberous roots are a root vegetable.",
+    description: "A plant that belongs to the bindweed or morning glory family, Its large, starchy, sweet-tasting root vegetable.",
     category: "Produce",
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqOF5TQtHWcS_sjsi2byPTp7x3rQ4B3-Vhq-uKuoijFzcSgc2i&s"
 
