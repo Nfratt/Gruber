@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { Elements, StripeProvider } from 'react-stripe-elements';
 import Product from './componants/Product/Product';
 import CartFunction from './cartFunction'
-import CheckoutForm from './componants/CheckoutForm/';
-import API from './api';
+
 
 
 export default function App() {

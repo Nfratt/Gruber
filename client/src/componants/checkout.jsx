@@ -3,7 +3,6 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 import CheckoutForm from './CheckoutForm';
-import {initialState} from '../redux/reducers/cart'
 
 export function Checkout(props) {
  return (
